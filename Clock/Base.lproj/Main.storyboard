@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jip-TK-FQR" customClass="CustomButton" customModule="Clock" customModuleProvider="target">
-                                <rect key="frame" x="163" y="28" width="48" height="48"/>
+                                <rect key="frame" x="163" y="40" width="48" height="48"/>
                                 <color key="backgroundColor" red="0.84708523750305176" green="0.84706932306289673" blue="0.84708011150360107" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="60x-D6-ga0"/>
@@ -39,7 +39,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="jip-TK-FQR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ybp-UB-DFr"/>
-                            <constraint firstItem="jip-TK-FQR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="bBO-wB-ftb"/>
+                            <constraint firstItem="jip-TK-FQR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="bBO-wB-ftb"/>
                         </constraints>
                     </view>
                 </viewController>
