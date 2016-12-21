@@ -58,16 +58,40 @@
 		9B670B511E0B03FC00A22453 /* Clock */ = {
 			isa = PBXGroup;
 			children = (
+				9B670B6B1E0B070D00A22453 /* Model */,
+				9B670B6A1E0B070700A22453 /* View */,
+				9B670B691E0B06FD00A22453 /* Controller */,
 				9B670B521E0B03FC00A22453 /* AppDelegate.swift */,
 				9B670B541E0B03FC00A22453 /* ViewController.swift */,
 				9B670B561E0B03FC00A22453 /* Main.storyboard */,
-				9B670B671E0B057600A22453 /* CustomButton.swift */,
 				9B670B5C1E0B03FC00A22453 /* Assets.xcassets */,
 				9B670B5E1E0B03FC00A22453 /* LaunchScreen.storyboard */,
 				9B670B611E0B03FC00A22453 /* Info.plist */,
 				9B670B591E0B03FC00A22453 /* Clock.xcdatamodeld */,
 			);
 			path = Clock;
+			sourceTree = "<group>";
+		};
+		9B670B691E0B06FD00A22453 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		9B670B6A1E0B070700A22453 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9B670B671E0B057600A22453 /* CustomButton.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		9B670B6B1E0B070D00A22453 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
