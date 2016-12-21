@@ -14,6 +14,7 @@
 		9B670B5D1E0B03FC00A22453 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B670B5C1E0B03FC00A22453 /* Assets.xcassets */; };
 		9B670B601E0B03FC00A22453 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B670B5E1E0B03FC00A22453 /* LaunchScreen.storyboard */; };
 		9B670B681E0B057600A22453 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B670B671E0B057600A22453 /* CustomButton.swift */; };
+		9B670B6D1E0B0A3700A22453 /* TimerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B670B6C1E0B0A3700A22453 /* TimerVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		9B670B5F1E0B03FC00A22453 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9B670B611E0B03FC00A22453 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B670B671E0B057600A22453 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		9B670B6C1E0B0A3700A22453 /* TimerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 		9B670B691E0B06FD00A22453 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				9B670B6C1E0B0A3700A22453 /* TimerVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -168,6 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B670B681E0B057600A22453 /* CustomButton.swift in Sources */,
+				9B670B6D1E0B0A3700A22453 /* TimerVC.swift in Sources */,
 				9B670B551E0B03FC00A22453 /* ViewController.swift in Sources */,
 				9B670B5B1E0B03FC00A22453 /* Clock.xcdatamodeld in Sources */,
 				9B670B531E0B03FC00A22453 /* AppDelegate.swift in Sources */,
