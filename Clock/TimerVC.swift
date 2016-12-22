@@ -88,28 +88,8 @@ class TimerVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSF
     }
 
     @IBAction func addButtonPressed(_ sender: UIButton) {
-        let alertController = UIAlertController(title: "New Timer", message: "Enter timer name", preferredStyle: .alert)
-        
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        
-        let saveAction = UIAlertAction(title: "Save", style: .default) { (action) in
-            let nameTextField = alertController.textFields![0] as UITextField
-            
-            if let text = nameTextField.text {
-                let timerData = TimerData(name: text)
-                timerData.save()
-            }
-            
-        }
-        
-        alertController.addAction(cancelAction)
-        alertController.addAction(saveAction)
-        
-        alertController.addTextField { (textField) in
-            textField.placeholder = "Title"
-        }
-        
-        present(alertController, animated: true, completion: nil)
+        let timerData = TimerData()
+        present(timerData.saveAlert(), animated: true, completion: nil)
     }
     
     func configureCell(cell: TimerCell, indexPath: IndexPath) {
