@@ -21,7 +21,12 @@ class TimerData {
             
             if let text = nameTextField.text {
                 self.name = text
-                self.save()
+                
+                if let timer = timer {
+                    self.save(timer: timer)
+                } else {
+                    self.save()
+                }
             }
             
         }
