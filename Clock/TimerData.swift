@@ -24,6 +24,11 @@ class TimerData {
     }
     
     func save() {
+        let timer = Timer(context: context)
+        
+        timer.startDate = NSDate()
+        timer.name = name
+        
         
     }
 }
