@@ -117,6 +117,14 @@ class TimerVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSF
         
         let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
         self.controller = controller
+        
+        controller.delegate = self
+        
+        do {
+            try controller.performFetch()
+        } catch {
+            print("Unable to fetch timers: \(error)")
+        }
     }
 }
 
