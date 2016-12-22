@@ -71,4 +71,37 @@ class TimerData {
             print("Unable to save timer to core data: \(error)")
         }
     }
+    
+    func tick(with: TimerEntity) {
+        let timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { (timer) in
+            print("tick")
+        }
+    }
+    
+    
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
