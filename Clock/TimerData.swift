@@ -14,7 +14,7 @@ class TimerData {
     func saveAlert(timer: Timer? = nil) -> UIAlertController {
         var title = ""
         
-        if let timer = timer {
+        if timer != nil {
             title = "Edit Timer"
         } else {
             title = "New Timer"
