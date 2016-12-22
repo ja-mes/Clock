@@ -10,7 +10,7 @@ import UIKit
 
 class TimerData {
     
-    func saveAlert() -> UIAlertController {
+    func saveAlert(edit: Bool) -> UIAlertController {
         let alertController = UIAlertController(title: "New Timer", message: "Enter timer name", preferredStyle: .alert)
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
@@ -45,5 +45,9 @@ class TimerData {
         } catch {
             print("Unable to save timer to core data: \(error)")
         }
+    }
+    
+    func update(timer: Timer, name: String) {
+        
     }
 }

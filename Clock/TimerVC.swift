@@ -89,7 +89,10 @@ class TimerVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSF
 
     @IBAction func addButtonPressed(_ sender: UIButton) {
         let timerData = TimerData()
-        present(timerData.saveAlert(), animated: true, completion: nil)
+        present(timerData.saveAlert(edit: false), animated: true, completion: nil)
+    }
+    
+    @IBAction func editButtonPressed(_ sender: UIButton) {
     }
     
     func configureCell(cell: TimerCell, indexPath: IndexPath) {
