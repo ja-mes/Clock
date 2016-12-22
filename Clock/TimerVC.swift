@@ -13,7 +13,7 @@ class TimerVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSF
     @IBOutlet weak var tableView: UITableView!
     
     var controller: NSFetchedResultsController<TimerEntity>!
-    g
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
