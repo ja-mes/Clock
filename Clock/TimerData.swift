@@ -9,8 +9,9 @@
 import UIKit
 
 class TimerData {
+    private var name: String = ""
     
-    func saveAlert(edit: Bool) -> UIAlertController {
+    func saveAlert(timer: Timer? = nil) -> UIAlertController {
         let alertController = UIAlertController(title: "New Timer", message: "Enter timer name", preferredStyle: .alert)
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
@@ -19,7 +20,8 @@ class TimerData {
             let nameTextField = alertController.textFields![0] as UITextField
             
             if let text = nameTextField.text {
-                self.save(name: text)
+                self.name = text
+                self.save()
             }
             
         }
@@ -29,25 +31,31 @@ class TimerData {
         
         alertController.addTextField { (textField) in
             textField.placeholder = "Title"
+            
+            if let timer = timer {
+                textField.text = timer.name
+            }
         }
         
         return alertController
     }
     
-    func save(name: String) {
-        let timer = Timer(context: context)
+    func save(timer: Timer? = nil) {
+        var item: Timer!
         
-        timer.startDate = NSDate()
-        timer.name = name
+        if let timer = timer {
+            item = timer
+        } else {
+            item = Timer(context: context)
+        }
+        
+        item.startDate = NSDate()
+        item.name = name
         
         do {
             try context.save()
         } catch {
             print("Unable to save timer to core data: \(error)")
         }
-    }
-    
-    func update(timer: Timer, name: String) {
-        
     }
 }
