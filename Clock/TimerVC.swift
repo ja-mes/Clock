@@ -14,13 +14,22 @@ class TimerVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSF
     
     var controller: NSFetchedResultsController<TimerEntity>!
     
+    var timers = [Timer?]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.delegate = self
         tableView.dataSource = self
         
+        
         fetchTimers()
+        
+        
+        if let numberOfCells = controller.sections?[0].numberOfObjects {
+            timers = Array<Timer>(repeating: Timer(), count: numberOfCells)
+        }
+        
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
