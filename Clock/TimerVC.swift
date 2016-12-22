@@ -38,6 +38,7 @@ class TimerVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         let alertController = UIAlertController(title: "New Timer", message: "Enter timer name", preferredStyle: .alert)
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
         let saveAction = UIAlertAction(title: "Save", style: .default) { (action) in
             
         }
