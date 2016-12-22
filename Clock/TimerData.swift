@@ -29,6 +29,10 @@ class TimerData {
         timer.startDate = NSDate()
         timer.name = name
         
-        
+        do {
+            try context.save()
+        } catch {
+            print("Unable to save timer to core data: \(error)")
+        }
     }
 }
