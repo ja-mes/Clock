@@ -105,11 +105,11 @@ class TimerVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSF
     @IBAction func startButtonPressed(_ sender: UIButton) {
         let buttonPostion = sender.convert(CGPoint.zero, to: tableView)
         
-        if let indexPath = tableView.indexPathForRow(at: buttonPostion) {
+        if let indexPath = tableView.indexPathForRow(at: buttonPostion), let cell = tableView.cellForRow(at: indexPath) as? TimerCell {
             let timer = controller.object(at: indexPath)
             
             let timerData = TimerData()
-            timerData.tick(with: timer)
+            timerData.tick(with: timer, to: cell.timeLbl)
         }
     }
     
