@@ -40,7 +40,7 @@ class TimerVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSF
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "TimerCell") {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "TimerCell") as? TimerCell {
             configureCell(cell: cell, indexPath: indexPath)
             
             return cell
@@ -71,7 +71,7 @@ class TimerVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSF
             break
         case.update:
             if let indexPath = indexPath {
-                if let cell = tableView.cellForRow(at: indexPath) {
+                if let cell = tableView.cellForRow(at: indexPath) as? TimerCell {
                     configureCell(cell: cell, indexPath: indexPath)
                 }
             }
@@ -112,8 +112,13 @@ class TimerVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSF
         present(alertController, animated: true, completion: nil)
     }
     
-    func configureCell(cell: UITableViewCell, indexPath: IndexPath) {
+    func configureCell(cell: TimerCell, indexPath: IndexPath) {
         let timer = controller.object(at: indexPath)
+        
+        if let name = timer.name {
+            cell.nameLbl.text = "\(name)  - "
+        }
+        
     }
     
     func fetchTimers() {
