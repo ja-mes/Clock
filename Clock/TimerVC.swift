@@ -93,6 +93,12 @@ class TimerVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSF
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         
         let saveAction = UIAlertAction(title: "Save", style: .default) { (action) in
+            let nameTextField = alertController.textFields![0] as UITextField
+            
+            if let text = nameTextField.text {
+                let timerData = TimerData(name: text)
+                timerData.save()
+            }
             
         }
         

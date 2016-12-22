@@ -22,4 +22,8 @@ class TimerData {
     init(name: String) {
         _name = name
     }
+    
+    func save() {
+        
+    }
 }
