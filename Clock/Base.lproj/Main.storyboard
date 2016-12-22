@@ -152,6 +152,10 @@
                                                 <constraint firstItem="3ak-Zh-ndA" firstAttribute="top" secondItem="k6z-c7-9yM" secondAttribute="topMargin" id="myJ-hb-Gz1"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameLbl" destination="3ak-Zh-ndA" id="m5c-JQ-lY0"/>
+                                            <outlet property="timeLbl" destination="bf9-i6-Bfp" id="c8k-lA-1CM"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
