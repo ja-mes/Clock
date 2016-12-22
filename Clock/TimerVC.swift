@@ -12,7 +12,7 @@ import CoreData
 class TimerVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFetchedResultsControllerDelegate {
     @IBOutlet weak var tableView: UITableView!
     
-    var controller: NSFetchedResultsController<Timer>!
+    var controller: NSFetchedResultsController<TimerEntity>!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -112,7 +112,7 @@ class TimerVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSF
     }
     
     func fetchTimers() {
-        let fetchRequest: NSFetchRequest<Timer> = Timer.fetchRequest()
+        let fetchRequest: NSFetchRequest<TimerEntity> = TimerEntity.fetchRequest()
         
         fetchRequest.sortDescriptors = [NSSortDescriptor(key: "startDate", ascending: false)]
         

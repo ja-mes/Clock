@@ -11,7 +11,7 @@ import UIKit
 class TimerData {
     private var name: String = ""
     
-    func saveAlert(timer: Timer? = nil) -> UIAlertController {
+    func saveAlert(timer: TimerEntity? = nil) -> UIAlertController {
         var title = ""
         
         if timer != nil {
@@ -53,13 +53,13 @@ class TimerData {
         return alertController
     }
     
-    func save(timer: Timer? = nil) {
-        var item: Timer!
+    func save(timer: TimerEntity? = nil) {
+        var item: TimerEntity!
         
         if let timer = timer {
             item = timer
         } else {
-            item = Timer(context: context)
+            item = TimerEntity(context: context)
         }
         
         item.startDate = NSDate()
