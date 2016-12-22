@@ -20,7 +20,7 @@ class TimerCell: UITableViewCell {
     }
     
     override func prepareForReuse() {
-        
+        timer?.invalidate()
     }
     
     @IBAction func startButtonPressed(_ sender: UIButton) {
