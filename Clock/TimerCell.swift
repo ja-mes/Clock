@@ -14,6 +14,6 @@ class TimerCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-    g}
+    }
     
 }
