@@ -12,7 +12,15 @@ class TimerData {
     private var name: String = ""
     
     func saveAlert(timer: Timer? = nil) -> UIAlertController {
-        let alertController = UIAlertController(title: "New Timer", message: "Enter timer name", preferredStyle: .alert)
+        var title = ""
+        
+        if let timer = timer {
+            title = "Edit Timer"
+        } else {
+            title = "New Timer"
+        }
+        
+        let alertController = UIAlertController(title: title, message: "Enter timer name", preferredStyle: .alert)
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         
