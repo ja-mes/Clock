@@ -14,5 +14,9 @@ class TimerCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { (timer) in
+            
+        }
     }
 }
