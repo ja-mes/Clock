@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9B66D9F31E0B74C2000DA379 /* TimerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B66D9F21E0B74C2000DA379 /* TimerCell.swift */; };
+		9B66D9F51E0B7580000DA379 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B66D9F41E0B7580000DA379 /* Timer.swift */; };
 		9B670B531E0B03FC00A22453 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B670B521E0B03FC00A22453 /* AppDelegate.swift */; };
 		9B670B581E0B03FC00A22453 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B670B561E0B03FC00A22453 /* Main.storyboard */; };
 		9B670B5B1E0B03FC00A22453 /* Clock.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9B670B591E0B03FC00A22453 /* Clock.xcdatamodeld */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		9B66D9F21E0B74C2000DA379 /* TimerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerCell.swift; sourceTree = "<group>"; };
+		9B66D9F41E0B7580000DA379 /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
 		9B670B4F1E0B03FC00A22453 /* Clock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Clock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B670B521E0B03FC00A22453 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B670B571E0B03FC00A22453 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 		9B670B6B1E0B070D00A22453 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9B66D9F41E0B7580000DA379 /* Timer.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -173,6 +176,7 @@
 				9B670B681E0B057600A22453 /* CustomButton.swift in Sources */,
 				9B670B6D1E0B0A3700A22453 /* TimerVC.swift in Sources */,
 				9B670B5B1E0B03FC00A22453 /* Clock.xcdatamodeld in Sources */,
+				9B66D9F51E0B7580000DA379 /* Timer.swift in Sources */,
 				9B670B531E0B03FC00A22453 /* AppDelegate.swift in Sources */,
 				9B66D9F31E0B74C2000DA379 /* TimerCell.swift in Sources */,
 			);
