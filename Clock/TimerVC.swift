@@ -13,9 +13,7 @@ class TimerVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSF
     @IBOutlet weak var tableView: UITableView!
     
     var controller: NSFetchedResultsController<TimerEntity>!
-    
-    var timers = [Timer?]()
-    
+    g
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,12 +22,6 @@ class TimerVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSF
         
         
         fetchTimers()
-        
-        
-        if let numberOfCells = controller.sections?[0].numberOfObjects {
-            timers = Array<Timer>(repeating: Timer(), count: numberOfCells)
-        }
-        
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
