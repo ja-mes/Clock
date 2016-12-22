@@ -11,9 +11,20 @@ import UIKit
 class TimerCell: UITableViewCell {
     @IBOutlet weak var nameLbl: UILabel!
     @IBOutlet weak var timeLbl: UILabel!
+    
+    var timerEntity: TimerEntity!
+    var timer: Timer?
 
     override func awakeFromNib() {
         super.awakeFromNib()
+    }
+    
+    override func prepareForReuse() {
+        
+    }
+    
+    @IBAction func startButtonPressed(_ sender: UIButton) {
+        timer = TimerData().tick(with: timerEntity, to: timeLbl)
     }
     
 }

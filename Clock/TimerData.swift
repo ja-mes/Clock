@@ -72,14 +72,16 @@ class TimerData {
         }
     }
     
-    func tick(with timerEntity: TimerEntity, to label: UILabel) {
-        _ = Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true) { (timer) in
+    func tick(with timerEntity: TimerEntity, to label: UILabel) -> Timer {
+        let timer = Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true) { (timer) in
             if let startDate = timerEntity.startDate {
                 let seconds = Date().timeIntervalSince(startDate as Date)
                 
                 label.text = "\((Double(round(100*seconds)/100)))"
             }
         }
+        
+        return timer
     }
     
     
