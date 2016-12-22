@@ -41,10 +41,50 @@ class TimerVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSF
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "TimerCell") {
+            configureCell(cell: cell, indexPath: indexPath)
+            
             return cell
         }
         
         return UITableViewCell()
+    }
+    
+    func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        tableView.beginUpdates()
+    }
+    
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        tableView.endUpdates()
+    }
+    
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+        switch type {
+        case.insert:
+            if let indexPath = newIndexPath {
+                tableView.insertRows(at: [indexPath], with: .fade)
+            }
+            break
+        case.delete:
+            if let indexPath = indexPath {
+                tableView.deleteRows(at: [indexPath], with: .fade)
+            }
+            break
+        case.update:
+            if let indexPath = indexPath {
+                if let cell = tableView.cellForRow(at: indexPath) {
+                    configureCell(cell: cell, indexPath: indexPath)
+                }
+            }
+            break
+        case.move:
+            if let indexPath = indexPath {
+                tableView.deleteRows(at: [indexPath], with: .fade)
+            }
+            if let indexPath = newIndexPath {
+                tableView.insertRows(at: [indexPath], with: .fade)
+            }
+            break
+        }
     }
 
     @IBAction func addButtonPressed(_ sender: UIButton) {
@@ -65,4 +105,27 @@ class TimerVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSF
         
         present(alertController, animated: true, completion: nil)
     }
+    
+    func configureCell(cell: UITableViewCell, indexPath: IndexPath) {
+        
+    }
+    
+    func fetchTimers() {
+        
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
