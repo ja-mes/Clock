@@ -72,9 +72,13 @@ class TimerData {
         }
     }
     
-    func tick(with: TimerEntity) {
+    func tick(with timerEntity: TimerEntity) {
         let timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { (timer) in
-            print("tick")
+            if let startDate = timerEntity.startDate {
+                let seconds = Date().timeIntervalSince(startDate as Date)
+                
+                print(seconds)
+            }
         }
     }
     
