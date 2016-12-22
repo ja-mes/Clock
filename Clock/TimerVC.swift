@@ -107,11 +107,16 @@ class TimerVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSF
     }
     
     func configureCell(cell: UITableViewCell, indexPath: IndexPath) {
-        
+        let timer = controller.object(at: indexPath)
     }
     
     func fetchTimers() {
+        let fetchRequest: NSFetchRequest<Timer> = Timer.fetchRequest()
         
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "startDate", ascending: false)]
+        
+        let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+        self.controller = controller
     }
 }
 
