@@ -21,10 +21,25 @@ class TimerCell: UITableViewCell {
     
     override func prepareForReuse() {
         timer?.invalidate()
+        timer = nil
     }
     
+    
     @IBAction func startButtonPressed(_ sender: UIButton) {
-        timer = TimerData().tick(with: timerEntity, to: timeLbl)
+        let timerData = TimerData()
+        
+        timer = timerData.tick(with: timerEntity, to: timeLbl)
+        
+        timerEntity.isRunning = true
+        appDel.saveContext()
+    }
+    
+    
+    func startTimer() {
+        let timerData = TimerData()
+        
+        
+        timer = timerData.tick(with: timerEntity, to: timeLbl)
     }
     
 }

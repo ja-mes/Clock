@@ -60,6 +60,7 @@ class TimerData {
             item = timer
         } else {
             item = TimerEntity(context: context)
+            item.isRunning = false
         }
         
         item.startDate = NSDate()
@@ -85,8 +86,11 @@ class TimerData {
     }
     
     
+    func toggleRunning(timerEntity: TimerEntity) {
+        timerEntity.isRunning = !timerEntity.isRunning
+    }
+    
 }
-
 
 
 

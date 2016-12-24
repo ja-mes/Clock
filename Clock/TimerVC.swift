@@ -109,6 +109,10 @@ class TimerVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSF
         
         cell.timerEntity = timer
         
+        if timer.isRunning {
+            cell.startTimer()
+        }
+        
         if let name = timer.name {
             cell.nameLbl.text = "\(name)  - "
         }
