@@ -11,12 +11,22 @@ import UIKit
 class TimerCell: UITableViewCell {
     @IBOutlet weak var nameLbl: UILabel!
     @IBOutlet weak var timeLbl: UILabel!
+    @IBOutlet weak var startButton: UIButton!
     
     var timerEntity: TimerEntity!
     var timer: Timer?
 
     override func awakeFromNib() {
         super.awakeFromNib()
+    }
+    override func setEditing(_ editing: Bool, animated: Bool) {
+        super.setEditing(editing, animated: animated)
+        
+        if editing {
+            startButton.isHidden = true
+        } else {
+            startButton.isHidden = false
+        }
     }
 
     

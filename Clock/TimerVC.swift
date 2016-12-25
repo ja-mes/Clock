@@ -53,6 +53,16 @@ class TimerVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSF
         return UITableViewCell()
     }
     
+    func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        let itemToMove = controller.object(at: sourceIndexPath)
+        
+        
+    }
+    
     func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         tableView.beginUpdates()
     }

@@ -129,6 +129,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="nameLbl" destination="3ak-Zh-ndA" id="m5c-JQ-lY0"/>
+                                            <outlet property="startButton" destination="AwC-a7-GXQ" id="WMB-DK-7hO"/>
                                             <outlet property="timeLbl" destination="bf9-i6-Bfp" id="c8k-lA-1CM"/>
                                         </connections>
                                     </tableViewCell>
