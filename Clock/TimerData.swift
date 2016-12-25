@@ -63,7 +63,6 @@ class TimerData {
             item.isRunning = false
         }
         
-        item.startDate = NSDate()
         item.name = name
         
         do {

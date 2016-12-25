@@ -27,6 +27,7 @@ class TimerCell: UITableViewCell {
     
     @IBAction func startButtonPressed(_ sender: UIButton) {
         timerEntity.isRunning = true
+        timerEntity.startDate = NSDate()
         appDel.saveContext()
     }
 }
