@@ -117,7 +117,7 @@ class TimerVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSF
             let seconds = Date().timeIntervalSince(startDate as Date)
             cell.timeLbl.text = "\(seconds.rounded())"
         } else {
-            cell.timeLbl.text = "0:00.00"
+            cell.timeLbl.text = "0:00"
         }
         
         if let name = timer.name {
