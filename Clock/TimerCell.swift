@@ -26,10 +26,6 @@ class TimerCell: UITableViewCell {
     
     
     @IBAction func startButtonPressed(_ sender: UIButton) {
-        let timerData = TimerData()
-        
-        timer = timerData.tick(with: timerEntity, to: timeLbl)
-        
         timerEntity.isRunning = true
         appDel.saveContext()
     }
