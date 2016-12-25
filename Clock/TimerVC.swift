@@ -24,7 +24,9 @@ class TimerVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSF
         fetchTimers()
         
         _ = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { (timer) in
-            self.tableView.reloadData()
+            for cell in self.tableView.visibleCells as! [TimerCell] {
+                
+            }
         }
     }
     
