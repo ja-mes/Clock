@@ -131,6 +131,9 @@
                                                                     <real key="value" value="2"/>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <action selector="resetButtonPressed:" destination="Zj7-wr-kwT" eventType="touchUpInside" id="zkn-6w-FI9"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                 </stackView>
