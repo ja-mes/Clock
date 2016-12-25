@@ -22,6 +22,10 @@ class TimerVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSF
         
         
         fetchTimers()
+        
+        let _ = Timer(timeInterval: 0.01, repeats: true) { (timer) in
+            self.tableView.reloadData()
+        }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

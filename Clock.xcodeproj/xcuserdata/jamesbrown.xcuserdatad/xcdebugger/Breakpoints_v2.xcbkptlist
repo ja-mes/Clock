@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Clock/TimerCell.swift"
-            timestampString = "504317603.166725"
+            timestampString = "504374234.335257"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
             landmarkName = "refreshTimer(notification:)"
             landmarkType = "7">
          </BreakpointContent>
