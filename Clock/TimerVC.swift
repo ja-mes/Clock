@@ -23,7 +23,7 @@ class TimerVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSF
         
         fetchTimers()
         
-        _ = Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true) { (timer) in
+        _ = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { (timer) in
             self.tableView.reloadData()
         }
     }
@@ -115,7 +115,9 @@ class TimerVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSF
         
         if timer.isRunning, let startDate = timer.startDate {
             let seconds = Date().timeIntervalSince(startDate as Date)
-            cell.timeLbl.text = "\((Double(round(100*seconds)/100)))"
+            cell.timeLbl.text = "\(seconds.rounded())"
+        } else {
+            cell.timeLbl.text = "0:00.00"
         }
         
         if let name = timer.name {
