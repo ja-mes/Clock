@@ -114,8 +114,27 @@ class TimerVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSF
         cell.timerEntity = timer
         
         if timer.isRunning, let startDate = timer.startDate {
-            let seconds = Date().timeIntervalSince(startDate as Date)
-            cell.timeLbl.text = "\(seconds.rounded())"
+            let secondsInt = Int(Date().timeIntervalSince(startDate as Date).rounded())
+            let breakDown = secondsToHoursMinutesSeconds(seconds: secondsInt)
+            
+            var hours = "\(breakDown.0)"
+            if breakDown.0 < 10 {
+                hours = "0\(breakDown.0)"
+            }
+            
+            var minutes = "\(breakDown.1)"
+            if breakDown.1 < 10 {
+                minutes = "0\(breakDown.1)"
+            }
+            
+            var seconds = "\(breakDown.2)"
+            if breakDown.2 < 10 {
+                seconds = "0\(breakDown.2)"
+            }
+            
+            
+            
+            cell.timeLbl.text = "\(hours):\(minutes):\(seconds)"
         } else {
             cell.timeLbl.text = "0:00"
         }
@@ -141,6 +160,10 @@ class TimerVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSF
         } catch {
             print("Unable to fetch timers: \(error)")
         }
+    }
+    
+    func secondsToHoursMinutesSeconds (seconds : Int) -> (Int, Int, Int) {
+        return (seconds / 3600, (seconds % 3600) / 60, (seconds % 3600) % 60)
     }
 }
 
