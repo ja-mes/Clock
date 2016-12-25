@@ -18,7 +18,7 @@ class TimerCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-    
+
     
     @IBAction func resetButtonPressed(_ sender: UIButton) {
         timerEntity.isRunning = false

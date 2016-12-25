@@ -20,7 +20,6 @@ class TimerVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSF
         tableView.delegate = self
         tableView.dataSource = self
         
-        
         fetchTimers()
         
         _ = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { (timer) in
@@ -95,6 +94,16 @@ class TimerVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSF
     @IBAction func addButtonPressed(_ sender: UIButton) {
         let timerData = TimerData()
         present(timerData.saveAlert(), animated: true, completion: nil)
+    }
+    
+    @IBAction func editTableViewButtonPressed(_ sender: UIButton) {
+        if tableView.isEditing {
+            sender.setTitle("Edit", for: .normal)
+            tableView.setEditing(false, animated: true)
+        } else {
+            sender.setTitle("Done", for: .normal)
+            tableView.setEditing(true, animated: true)
+        }
     }
     
     @IBAction func editButtonPressed(_ sender: UIButton) {

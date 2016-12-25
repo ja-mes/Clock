@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -19,11 +19,11 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jip-TK-FQR" customClass="CustomButton" customModule="Clock" customModuleProvider="target">
-                                <rect key="frame" x="163.5" y="40" width="48" height="48"/>
+                                <rect key="frame" x="183" y="40" width="48" height="48"/>
                                 <color key="backgroundColor" red="0.84708523750305176" green="0.84706932306289673" blue="0.84708011150360107" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="60x-D6-ga0"/>
@@ -52,14 +52,14 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="136" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="L7M-KC-LyQ">
-                                <rect key="frame" x="0.0" y="108" width="375" height="559"/>
+                                <rect key="frame" x="0.0" y="108" width="414" height="628"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TimerCell" rowHeight="136" id="Zj7-wr-kwT" customClass="TimerCell" customModule="Clock" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="136"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="136"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Zj7-wr-kwT" id="k6z-c7-9yM">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="136"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="136"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Egg timer  -" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ak-Zh-ndA">
@@ -68,75 +68,12 @@
                                                     <color key="textColor" red="0.25882352939999997" green="0.25882352939999997" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bf9-i6-Bfp">
-                                                    <rect key="frame" x="20" y="41" width="113.5" height="61.5"/>
-                                                    <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="45"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bf9-i6-Bfp">
+                                                    <rect key="frame" x="20" y="41" width="194" height="66"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="48"/>
                                                     <color key="textColor" red="0.25882352939999997" green="0.25882352939999997" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="DGQ-yb-QNo">
-                                                    <rect key="frame" x="234" y="46" width="125" height="50"/>
-                                                    <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AwC-a7-GXQ" customClass="CustomButton" customModule="Clock" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                                            <color key="backgroundColor" red="0.29803921568627451" green="0.68627450980392157" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="50" id="KzH-Cd-Atx"/>
-                                                                <constraint firstAttribute="height" constant="50" id="N0w-uU-A8q"/>
-                                                            </constraints>
-                                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
-                                                            <state key="normal" title="Start">
-                                                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                            </state>
-                                                            <userDefinedRuntimeAttributes>
-                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                    <real key="value" value="25"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                                <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                                                    <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                                <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
-                                                                    <size key="value" width="0.0" height="1"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                                <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                                                    <real key="value" value="2"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                            </userDefinedRuntimeAttributes>
-                                                            <connections>
-                                                                <action selector="startButtonPressed:" destination="Zj7-wr-kwT" eventType="touchUpInside" id="hbJ-JN-x2B"/>
-                                                            </connections>
-                                                        </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kaP-jN-rh6" customClass="CustomButton" customModule="Clock" customModuleProvider="target">
-                                                            <rect key="frame" x="75" y="0.0" width="50" height="50"/>
-                                                            <color key="backgroundColor" red="0.12941176470588234" green="0.58823529411764708" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="50" id="Xxo-f3-m6c"/>
-                                                                <constraint firstAttribute="height" constant="50" id="gcO-ob-CMN"/>
-                                                            </constraints>
-                                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
-                                                            <state key="normal" title="Reset">
-                                                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                            </state>
-                                                            <userDefinedRuntimeAttributes>
-                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                    <real key="value" value="25"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                                <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                                                    <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                                <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
-                                                                    <size key="value" width="0.0" height="1"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                                <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                                                    <real key="value" value="2"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                            </userDefinedRuntimeAttributes>
-                                                            <connections>
-                                                                <action selector="resetButtonPressed:" destination="Zj7-wr-kwT" eventType="touchUpInside" id="zkn-6w-FI9"/>
-                                                            </connections>
-                                                        </button>
-                                                    </subviews>
-                                                </stackView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DDE-xS-r41">
                                                     <rect key="frame" x="124" y="8" width="80" height="28"/>
                                                     <constraints>
@@ -149,13 +86,42 @@
                                                         <action selector="editButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tp4-tH-Y7Q"/>
                                                     </connections>
                                                 </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AwC-a7-GXQ" customClass="CustomButton" customModule="Clock" customModuleProvider="target">
+                                                    <rect key="frame" x="296" y="41.666666666666657" width="65" height="65"/>
+                                                    <color key="backgroundColor" red="0.29803921568627451" green="0.68627450980392157" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="65" id="KzH-Cd-Atx"/>
+                                                        <constraint firstAttribute="height" constant="65" id="N0w-uU-A8q"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                                    <state key="normal" title="Start">
+                                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="32.5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                            <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                            <size key="value" width="0.0" height="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                            <real key="value" value="2"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="startButtonPressed:" destination="Zj7-wr-kwT" eventType="touchUpInside" id="hbJ-JN-x2B"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="bf9-i6-Bfp" firstAttribute="top" secondItem="3ak-Zh-ndA" secondAttribute="bottom" constant="8" id="6h0-E9-T5c"/>
-                                                <constraint firstItem="DGQ-yb-QNo" firstAttribute="top" secondItem="k6z-c7-9yM" secondAttribute="topMargin" constant="38" id="Bf8-GI-YyO"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="DGQ-yb-QNo" secondAttribute="trailing" constant="8" id="MWY-Oc-hWB"/>
                                                 <constraint firstItem="3ak-Zh-ndA" firstAttribute="leading" secondItem="k6z-c7-9yM" secondAttribute="leadingMargin" constant="12" id="NAa-Rn-RlC"/>
                                                 <constraint firstItem="DDE-xS-r41" firstAttribute="top" secondItem="k6z-c7-9yM" secondAttribute="topMargin" id="Qds-Va-U2r"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="AwC-a7-GXQ" secondAttribute="trailing" constant="45" id="R3V-AN-w4H"/>
+                                                <constraint firstItem="AwC-a7-GXQ" firstAttribute="centerY" secondItem="bf9-i6-Bfp" secondAttribute="centerY" id="UnV-Ch-1hW"/>
                                                 <constraint firstItem="bf9-i6-Bfp" firstAttribute="leading" secondItem="k6z-c7-9yM" secondAttribute="leadingMargin" constant="12" id="VEJ-He-JIE"/>
                                                 <constraint firstItem="DDE-xS-r41" firstAttribute="leading" secondItem="3ak-Zh-ndA" secondAttribute="trailing" constant="8" id="fCa-Xo-Oxd"/>
                                                 <constraint firstItem="3ak-Zh-ndA" firstAttribute="top" secondItem="k6z-c7-9yM" secondAttribute="topMargin" id="myJ-hb-Gz1"/>
@@ -168,14 +134,27 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wVQ-rk-ydZ">
+                                <rect key="frame" x="32" y="46" width="92" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="92" id="wga-wz-9RQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                                <state key="normal" title="Edit"/>
+                                <connections>
+                                    <action selector="editTableViewButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rgw-JA-8bR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="L7M-KC-LyQ" secondAttribute="trailing" id="0TU-SP-F3w"/>
                             <constraint firstItem="L7M-KC-LyQ" firstAttribute="top" secondItem="jip-TK-FQR" secondAttribute="bottom" constant="20" id="1Gz-8E-DcM"/>
+                            <constraint firstItem="wVQ-rk-ydZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="12" id="9ei-9L-BS8"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="L7M-KC-LyQ" secondAttribute="bottom" id="A1g-xY-Oih"/>
                             <constraint firstItem="jip-TK-FQR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ybp-UB-DFr"/>
                             <constraint firstItem="jip-TK-FQR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="bBO-wB-ftb"/>
+                            <constraint firstItem="wVQ-rk-ydZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="26" id="ro1-YT-g5k"/>
                             <constraint firstItem="L7M-KC-LyQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vFr-4H-hyz"/>
                         </constraints>
                     </view>
@@ -185,7 +164,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="32.799999999999997" y="37.331334332833585"/>
+            <point key="canvasLocation" x="31.884057971014496" y="36.684782608695656"/>
         </scene>
     </scenes>
     <resources>
