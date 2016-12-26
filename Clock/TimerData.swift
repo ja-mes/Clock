@@ -82,7 +82,6 @@ class TimerData {
         let startRef = startDate.timeIntervalSinceReferenceDate
         let pauseRef = pauseDate.timeIntervalSinceReferenceDate
         let timePaused = pauseRef - startRef
-        let timeOnTimer = pauseRef - startRef
         
         return timeSinceStartDate - timePaused
     }
