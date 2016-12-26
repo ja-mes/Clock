@@ -12,6 +12,7 @@ import CoreData
 class TimerVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFetchedResultsControllerDelegate {
     @IBOutlet weak var tableView: UITableView!
     
+    lazy var timerData = TimerData.shared
     var controller: NSFetchedResultsController<TimerEntity>!
     var timer: Timer!
     
@@ -158,7 +159,7 @@ class TimerVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSF
         
         if timer.isRunning, let startDate = timer.startDate {
             let secondsInt = Int(Date().timeIntervalSince(startDate as Date).rounded())
-            let breakDown = secondsToHoursMinutesSeconds(seconds: secondsInt)
+            let breakDown = timerData.secondsToHoursMinutesSeconds(seconds: secondsInt)
             
             var hours = "\(breakDown.0)"
             if breakDown.0 < 10 {
@@ -180,9 +181,9 @@ class TimerVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSF
             cell.timeLbl.text = "\(hours):\(minutes):\(seconds)"
         } else if let startDate = timer.startDate, let pauseDate = timer.pauseDate {
             
-            let timeOnTimer = TimerData.shared.calculateTimeWhenPaused(startDate: startDate, pauseDate: pauseDate)
+            let timeOnTimer = timerData.calculateTimeWhenPaused(startDate: startDate, pauseDate: pauseDate)
             
-            let breakDown = secondsToHoursMinutesSeconds(seconds: Int(timeOnTimer))
+            let breakDown = timerData.secondsToHoursMinutesSeconds(seconds: Int(timeOnTimer))
             
             var hours = "\(breakDown.0)"
             if breakDown.0 < 10 {
@@ -227,9 +228,6 @@ class TimerVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSF
         }
     }
     
-    func secondsToHoursMinutesSeconds (seconds : Int) -> (Int, Int, Int) {
-        return (seconds / 3600, (seconds % 3600) / 60, (seconds % 3600) % 60)
-    }
     
     func startTimer() {
         timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { (timer) in
