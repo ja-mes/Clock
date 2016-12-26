@@ -86,8 +86,26 @@ class TimerData {
         return timeSinceStartDate - timePaused
     }
     
-    func secondsToHoursMinutesSeconds (seconds : Int) -> (Int, Int, Int) {
-        return (seconds / 3600, (seconds % 3600) / 60, (seconds % 3600) % 60)
+    func applySecondsToLbl(seconds: Int, label: UILabel) {
+        let time = (seconds / 3600, (seconds % 3600) / 60, (seconds % 3600) % 60)
+        
+        var hours = "\(time.0)"
+        if time.0 < 10 {
+            hours = "0\(time.0)"
+        }
+        
+        var minutes = "\(time.1)"
+        if time.1 < 10 {
+            minutes = "0\(time.1)"
+        }
+        
+        var seconds = "\(time.2)"
+        if time.2 < 10 {
+            seconds = "0\(time.2)"
+        }
+        
+        label.text = "\(hours):\(minutes):\(seconds)"
+        
     }
 
 }

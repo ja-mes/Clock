@@ -159,48 +159,12 @@ class TimerVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSF
         
         if timer.isRunning, let startDate = timer.startDate {
             let secondsInt = Int(Date().timeIntervalSince(startDate as Date).rounded())
-            let breakDown = timerData.secondsToHoursMinutesSeconds(seconds: secondsInt)
+            timerData.applySecondsToLbl(seconds: secondsInt, label: cell.timeLbl)
             
-            var hours = "\(breakDown.0)"
-            if breakDown.0 < 10 {
-                hours = "0\(breakDown.0)"
-            }
-            
-            var minutes = "\(breakDown.1)"
-            if breakDown.1 < 10 {
-                minutes = "0\(breakDown.1)"
-            }
-            
-            var seconds = "\(breakDown.2)"
-            if breakDown.2 < 10 {
-                seconds = "0\(breakDown.2)"
-            }
-            
-            
-            
-            cell.timeLbl.text = "\(hours):\(minutes):\(seconds)"
         } else if let startDate = timer.startDate, let pauseDate = timer.pauseDate {
-            
             let timeOnTimer = timerData.calculateTimeWhenPaused(startDate: startDate, pauseDate: pauseDate)
-            
-            let breakDown = timerData.secondsToHoursMinutesSeconds(seconds: Int(timeOnTimer))
-            
-            var hours = "\(breakDown.0)"
-            if breakDown.0 < 10 {
-                hours = "0\(breakDown.0)"
-            }
-            
-            var minutes = "\(breakDown.1)"
-            if breakDown.1 < 10 {
-                minutes = "0\(breakDown.1)"
-            }
-            
-            var seconds = "\(breakDown.2)"
-            if breakDown.2 < 10 {
-                seconds = "0\(breakDown.2)"
-            }
+            timerData.applySecondsToLbl(seconds: Int(timeOnTimer), label: cell.timeLbl)
 
-            cell.timeLbl.text = "\(hours):\(minutes):\(seconds)"
         }
         
         if let name = timer.name {
