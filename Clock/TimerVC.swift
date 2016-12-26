@@ -13,6 +13,7 @@ class TimerVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSF
     @IBOutlet weak var tableView: UITableView!
     
     var controller: NSFetchedResultsController<TimerEntity>!
+    var timer: Timer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,10 +22,7 @@ class TimerVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSF
         tableView.dataSource = self
         
         fetchTimers()
-        
-        _ = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { (timer) in
-            self.tableView.reloadData()
-        }
+        startTimer()
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -126,9 +124,11 @@ class TimerVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSF
     
     @IBAction func editTableViewButtonPressed(_ sender: UIButton) {
         if tableView.isEditing {
+            startTimer()
             sender.setTitle("Edit", for: .normal)
             tableView.setEditing(false, animated: true)
         } else {
+            timer.invalidate()
             sender.setTitle("Done", for: .normal)
             tableView.setEditing(true, animated: true)
         }
@@ -201,6 +201,12 @@ class TimerVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSF
     
     func secondsToHoursMinutesSeconds (seconds : Int) -> (Int, Int, Int) {
         return (seconds / 3600, (seconds % 3600) / 60, (seconds % 3600) % 60)
+    }
+    
+    func startTimer() {
+        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { (timer) in
+            self.tableView.reloadData()
+        }
     }
 }
 
