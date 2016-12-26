@@ -56,27 +56,27 @@ class TimerVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSF
     }
     
     func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-        print(sourceIndexPath)
-        print(destinationIndexPath)
+        controller.delegate = nil
         
-//        fetchTimers()
-//        
-//        var objects = self.controller.fetchedObjects!
-//        self.controller.delegate = nil
-//        
-//        let object = objects[sourceIndexPath.row]
-//        objects.remove(at: sourceIndexPath.row)
-//        objects.insert(object, at: destinationIndexPath.row)
-//        
-//        var i = 0
-//        for object in objects {
-//            i += 1
-//            object.position = Int32(i)
-//        }
-//        
-//        appDel.saveContext()
-//        
-//        self.controller.delegate = self
+        if var objects = controller.fetchedObjects {
+            
+            let object = objects[sourceIndexPath.row]
+            objects.remove(at: sourceIndexPath.row)
+            objects.insert(object, at: destinationIndexPath.row)
+            
+            var i: Int32 = 0
+            for object in objects {
+                i += 1
+                object.position = i
+                
+            }
+            
+            appDel.saveContext()
+        }
+        
+        controller.delegate = self
+        
+        fetchTimers()
     }
     
     func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
