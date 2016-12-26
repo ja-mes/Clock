@@ -61,9 +61,11 @@ class TimerData {
         } else {
             item = TimerEntity(context: context)
             item.isRunning = false
+            item.creationDate = gNSDate()
         }
         
         item.name = name
+        
         
         do {
             try context.save()
