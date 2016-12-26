@@ -79,6 +79,13 @@ class TimerVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSF
         fetchTimers()
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            context.delete(controller.object(at: indexPath))
+            appDel.saveContext()
+        }
+    }
+    
     func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         tableView.beginUpdates()
     }
