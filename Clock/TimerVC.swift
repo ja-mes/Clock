@@ -186,7 +186,8 @@ class TimerVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSF
         let fetchRequest: NSFetchRequest<TimerEntity> = TimerEntity.fetchRequest()
         
         let postionSort = NSSortDescriptor(key: "position", ascending: true)
-        fetchRequest.sortDescriptors = [postionSort]
+        let dateSort = NSSortDescriptor(key: "creationDate", ascending: false)
+        fetchRequest.sortDescriptors = [postionSort, dateSort]
         
         let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
         self.controller = controller
