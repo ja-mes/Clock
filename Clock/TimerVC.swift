@@ -178,8 +178,34 @@ class TimerVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSF
             
             
             cell.timeLbl.text = "\(hours):\(minutes):\(seconds)"
-        } else {
-            cell.timeLbl.text = "0:00"
+        } else if let startDate = timer.startDate, let pauseDate = timer.pauseDate {
+            
+            let timeSinceStartDate = Date().timeIntervalSince(startDate as Date)
+            
+            let startRef = startDate.timeIntervalSinceReferenceDate
+            let pauseRef = pauseDate.timeIntervalSinceReferenceDate
+            
+            let timePaused = pauseRef - startRef
+            
+            let timeOnTimer = timeSinceStartDate - timePaused
+            let breakDown = secondsToHoursMinutesSeconds(seconds: Int(timeOnTimer))
+            
+            var hours = "\(breakDown.0)"
+            if breakDown.0 < 10 {
+                hours = "0\(breakDown.0)"
+            }
+            
+            var minutes = "\(breakDown.1)"
+            if breakDown.1 < 10 {
+                minutes = "0\(breakDown.1)"
+            }
+            
+            var seconds = "\(breakDown.2)"
+            if breakDown.2 < 10 {
+                seconds = "0\(breakDown.2)"
+            }
+
+            cell.timeLbl.text = "\(hours):\(minutes):\(seconds)"
         }
         
         if let name = timer.name {

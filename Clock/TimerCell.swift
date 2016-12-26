@@ -19,6 +19,7 @@ class TimerCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
     }
+    
     override func setEditing(_ editing: Bool, animated: Bool) {
         super.setEditing(editing, animated: animated)
         
@@ -30,14 +31,21 @@ class TimerCell: UITableViewCell {
     }
 
     
-    @IBAction func resetButtonPressed(_ sender: UIButton) {
-        timerEntity.isRunning = false
-        appDel.saveContext()
-    }
-    
     @IBAction func startButtonPressed(_ sender: UIButton) {
-        timerEntity.isRunning = true
-        timerEntity.startDate = NSDate()
+        if timerEntity.isRunning {
+            timerEntity.isRunning = false
+            
+            sender.backgroundColor = #colorLiteral(red: 0, green: 0.6969566941, blue: 0.2550100088, alpha: 1)
+            sender.setTitle("Start", for: .normal)
+        } else {
+            timerEntity.isRunning = true
+            timerEntity.startDate = NSDate()
+            
+            sender.backgroundColor = #colorLiteral(red: 1, green: 0.1535346806, blue: 0.1441769302, alpha: 1)
+            sender.setTitle("Stop", for: .normal)
+        }
+        
         appDel.saveContext()
+
     }
 }
