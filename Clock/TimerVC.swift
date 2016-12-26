@@ -59,7 +59,6 @@ class TimerVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSF
         controller.delegate = nil
         
         if var objects = controller.fetchedObjects {
-            
             let object = objects[sourceIndexPath.row]
             objects.remove(at: sourceIndexPath.row)
             objects.insert(object, at: destinationIndexPath.row)
