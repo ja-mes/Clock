@@ -180,14 +180,8 @@ class TimerVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSF
             cell.timeLbl.text = "\(hours):\(minutes):\(seconds)"
         } else if let startDate = timer.startDate, let pauseDate = timer.pauseDate {
             
-            let timeSinceStartDate = Date().timeIntervalSince(startDate as Date)
+            let timeOnTimer = TimerData.shared.calculateTimeWhenPaused(startDate: startDate, pauseDate: pauseDate)
             
-            let startRef = startDate.timeIntervalSinceReferenceDate
-            let pauseRef = pauseDate.timeIntervalSinceReferenceDate
-            
-            let timePaused = pauseRef - startRef
-            
-            let timeOnTimer = timeSinceStartDate - timePaused
             let breakDown = secondsToHoursMinutesSeconds(seconds: Int(timeOnTimer))
             
             var hours = "\(breakDown.0)"

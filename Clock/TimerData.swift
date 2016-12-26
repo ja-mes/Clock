@@ -9,6 +9,8 @@
 import UIKit
 
 class TimerData {
+    static let shared = TimerData()
+    
     private var name: String = ""
     
     func saveAlert(timer: TimerEntity? = nil) -> UIAlertController {
