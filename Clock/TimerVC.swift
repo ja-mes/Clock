@@ -58,9 +58,27 @@ class TimerVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSF
     }
     
     func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-        let itemToMove = controller.object(at: sourceIndexPath)
+        print(sourceIndexPath)
+        print(destinationIndexPath)
         
-        
+//        fetchTimers()
+//        
+//        var objects = self.controller.fetchedObjects!
+//        self.controller.delegate = nil
+//        
+//        let object = objects[sourceIndexPath.row]
+//        objects.remove(at: sourceIndexPath.row)
+//        objects.insert(object, at: destinationIndexPath.row)
+//        
+//        var i = 0
+//        for object in objects {
+//            i += 1
+//            object.position = Int32(i)
+//        }
+//        
+//        appDel.saveContext()
+//        
+//        self.controller.delegate = self
     }
     
     func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
@@ -167,7 +185,7 @@ class TimerVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSF
     func fetchTimers() {
         let fetchRequest: NSFetchRequest<TimerEntity> = TimerEntity.fetchRequest()
         
-        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "startDate", ascending: false)]
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "position", ascending: true)]
         
         let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
         self.controller = controller
