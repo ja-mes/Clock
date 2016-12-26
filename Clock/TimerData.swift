@@ -61,7 +61,7 @@ class TimerData {
         } else {
             item = TimerEntity(context: context)
             item.isRunning = false
-            item.creationDate = gNSDate()
+            item.creationDate = NSDate()
         }
         
         item.name = name
