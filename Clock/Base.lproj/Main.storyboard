@@ -87,7 +87,7 @@
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AwC-a7-GXQ" customClass="CustomButton" customModule="Clock" customModuleProvider="target">
-                                                    <rect key="frame" x="257" y="42" width="65" height="65"/>
+                                                    <rect key="frame" x="272" y="42" width="65" height="65"/>
                                                     <color key="backgroundColor" red="0.29803921568627451" green="0.68627450980392157" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="65" id="KzH-Cd-Atx"/>
@@ -120,7 +120,7 @@
                                                 <constraint firstItem="bf9-i6-Bfp" firstAttribute="top" secondItem="3ak-Zh-ndA" secondAttribute="bottom" constant="8" id="6h0-E9-T5c"/>
                                                 <constraint firstItem="3ak-Zh-ndA" firstAttribute="leading" secondItem="k6z-c7-9yM" secondAttribute="leadingMargin" constant="12" id="NAa-Rn-RlC"/>
                                                 <constraint firstItem="DDE-xS-r41" firstAttribute="top" secondItem="k6z-c7-9yM" secondAttribute="topMargin" id="Qds-Va-U2r"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="AwC-a7-GXQ" secondAttribute="trailing" constant="45" id="R3V-AN-w4H"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="AwC-a7-GXQ" secondAttribute="trailing" constant="30" id="R3V-AN-w4H"/>
                                                 <constraint firstItem="AwC-a7-GXQ" firstAttribute="centerY" secondItem="bf9-i6-Bfp" secondAttribute="centerY" id="UnV-Ch-1hW"/>
                                                 <constraint firstItem="bf9-i6-Bfp" firstAttribute="leading" secondItem="k6z-c7-9yM" secondAttribute="leadingMargin" constant="12" id="VEJ-He-JIE"/>
                                                 <constraint firstItem="DDE-xS-r41" firstAttribute="leading" secondItem="3ak-Zh-ndA" secondAttribute="trailing" constant="8" id="fCa-Xo-Oxd"/>

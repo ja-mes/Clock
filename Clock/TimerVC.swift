@@ -171,7 +171,7 @@ class TimerVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSF
         cell.timerEntity = timer
         
         if shouldStrinkLabels {
-            cell.timeLbl.font = UIFont(name: cell.timeLbl.font.fontName, size: 35)
+            cell.timeLbl.font = UIFont(name: cell.timeLbl.font.fontName, size: 40)
         }
         
         if timer.isRunning, let startDate = timer.startDate {
