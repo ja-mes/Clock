@@ -37,8 +37,7 @@ class TimerCell: UITableViewCell {
             
             timerEntity.pauseDate = NSDate()
             
-            sender.backgroundColor = #colorLiteral(red: 0, green: 0.6969566941, blue: 0.2550100088, alpha: 1)
-            sender.setTitle("Start", for: .normal)
+            toggleButton(start: true)
         } else {
             timerEntity.isRunning = true
             
@@ -53,11 +52,20 @@ class TimerCell: UITableViewCell {
             }
             
                         
-            sender.backgroundColor = #colorLiteral(red: 1, green: 0.1535346806, blue: 0.1441769302, alpha: 1)
-            sender.setTitle("Stop", for: .normal)
+            toggleButton(start: false)
         }
         
         appDel.saveContext()
 
+    }
+    
+    func toggleButton(start: Bool) {
+        if start {
+            startButton.backgroundColor = #colorLiteral(red: 0, green: 0.6969566941, blue: 0.2550100088, alpha: 1)
+            startButton.setTitle("Start", for: .normal)
+        } else {
+            startButton.backgroundColor = #colorLiteral(red: 1, green: 0.1535346806, blue: 0.1441769302, alpha: 1)
+            startButton.setTitle("Stop", for: .normal)
+        }
     }
 }
