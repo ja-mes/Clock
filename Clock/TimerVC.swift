@@ -17,7 +17,6 @@ class TimerVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSF
     var timer: Timer!
     
     var shouldStrinkLabels = false
-    var intialTableViewSetupDone = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -171,14 +170,16 @@ class TimerVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSF
         
         cell.timerEntity = timer
         
-        if !intialTableViewSetupDone {
-            tableViewIntialSetup(cell: cell, isRunning: timer.isRunning)
+        if shouldStrinkLabels {
+            cell.timeLbl.font = UIFont(name: cell.timeLbl.font.fontName, size: 35)
         }
         
-    
         if timer.isRunning, let startDate = timer.startDate {
             let secondsInt = Int(Date().timeIntervalSince(startDate as Date).rounded())
             cell.timeLbl.text = timerData.secondsToTimeString(seconds: secondsInt)
+
+            cell.changeButton(start: false)
+            
         } else if let startDate = timer.startDate, let pauseDate = timer.pauseDate {
             let timeOnTimer = Int(timerData.calculateTimeWhenPaused(startDate: startDate, pauseDate: pauseDate))
             
@@ -186,6 +187,7 @@ class TimerVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSF
             cell.changeButton(start: true)
         } else {
             cell.timeLbl.text = "00:00"
+            cell.changeButton(start: true)
         }
         
         if let name = timer.name {
@@ -218,16 +220,6 @@ class TimerVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSF
         timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { (timer) in
             self.tableView.reloadData()
         }
-    }
-    
-    func tableViewIntialSetup(cell: TimerCell, isRunning: Bool) {
-        cell.changeButton(start: !isRunning)
-        
-        if shouldStrinkLabels {
-            cell.timeLbl.font = UIFont(name: cell.timeLbl.font.fontName, size: 35)
-        }
-
-        intialTableViewSetupDone = true
     }
 }
 
