@@ -56,6 +56,13 @@ class TimerVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSF
         return true
     }
     
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        if tableView.isEditing {
+            return true
+        } 
+        return false
+    }
+    
     func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
         controller.delegate = nil
         
