@@ -78,12 +78,10 @@ class TimerData {
     
     
     func calculateTimeWhenPaused(startDate: NSDate, pauseDate: NSDate) -> Double {
-        let timeSinceStartDate = Date().timeIntervalSince(startDate as Date)
         let startRef = startDate.timeIntervalSinceReferenceDate
         let pauseRef = pauseDate.timeIntervalSinceReferenceDate
-        let timePaused = pauseRef - startRef
         
-        return timeSinceStartDate - timePaused
+        return pauseRef - startRef
     }
     
     func secondsToTimeString(seconds: Int) -> String {
