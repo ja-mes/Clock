@@ -39,6 +39,18 @@ class TimerCell: UITableViewCell {
             sender.setTitle("Start", for: .normal)
         } else {
             timerEntity.isRunning = true
+            
+//            if let startDate = timerEntity.startDate, let pauseDate = timerEntity.pauseDate {
+//                let secondsOnTimer = Int(TimerData.shared.calculateTimeWhenPaused(startDate: startDate, pauseDate: pauseDate).rounded())
+//                
+//                if let date = Calendar.current.date(byAdding: .second, value: -secondsOnTimer, to: Date()) {
+//                    timerEntity.startDate = date as NSDate
+//                }
+//            } else {
+//                timerEntity.startDate = NSDate()
+//            }
+//            
+            
             timerEntity.startDate = NSDate()
             
             sender.backgroundColor = #colorLiteral(red: 1, green: 0.1535346806, blue: 0.1441769302, alpha: 1)
