@@ -16,6 +16,8 @@ class TimerVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSF
     var controller: NSFetchedResultsController<TimerEntity>!
     var timer: Timer!
     
+    var shouldStrinkLabels = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,6 +26,10 @@ class TimerVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSF
         
         fetchTimers()
         startTimer()
+        
+        if self.view.frame.size.width <= 320 {
+            shouldStrinkLabels = true
+        }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -164,9 +170,14 @@ class TimerVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSF
         
         cell.timerEntity = timer
         
+        if shouldStrinkLabels {
+            cell.timeLbl.font = UIFont(name: cell.timeLbl.font.fontName, size: 35)
+        }
+        
         if timer.isRunning, let startDate = timer.startDate {
             let secondsInt = Int(Date().timeIntervalSince(startDate as Date).rounded())
             cell.timeLbl.text = timerData.secondsToTimeString(seconds: secondsInt)
+
             cell.changeButton(start: false)
             
         } else if let startDate = timer.startDate, let pauseDate = timer.pauseDate {
@@ -209,6 +220,10 @@ class TimerVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSF
         timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { (timer) in
             self.tableView.reloadData()
         }
+    }
+    
+    func tableViewIntialSetup(cell: UITableViewCell) {
+        
     }
 }
 
