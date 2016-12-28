@@ -74,18 +74,51 @@
                                                     <color key="textColor" red="0.25882352939999997" green="0.25882352939999997" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DDE-xS-r41">
-                                                    <rect key="frame" x="109" y="8" width="80" height="28"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="28" id="egB-aM-dZg"/>
-                                                        <constraint firstAttribute="width" constant="80" id="egp-3C-Sf3"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
-                                                    <state key="normal" title="Edit"/>
-                                                    <connections>
-                                                        <action selector="editButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tp4-tH-Y7Q"/>
-                                                    </connections>
-                                                </button>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="HIh-9j-w9f">
+                                                    <rect key="frame" x="117" y="8" width="116" height="28"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DDE-xS-r41" customClass="CustomButton" customModule="Clock" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="50" height="28"/>
+                                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="28" id="egB-aM-dZg"/>
+                                                                <constraint firstAttribute="width" constant="50" id="egp-3C-Sf3"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                                            <state key="normal" title="Edit">
+                                                                <color key="titleColor" red="0.29443696141242981" green="0.55751186609268188" blue="0.88633131980895996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            </state>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="2"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <action selector="editButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tp4-tH-Y7Q"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lep-wy-ZUq" customClass="CustomButton" customModule="Clock" customModuleProvider="target">
+                                                            <rect key="frame" x="66" y="0.0" width="50" height="28"/>
+                                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="28" id="0eY-bd-ebD"/>
+                                                                <constraint firstAttribute="width" constant="50" id="tjq-zr-egi"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                                            <state key="normal" title="Reset">
+                                                                <color key="titleColor" red="0.92045140266418457" green="0.25666525959968567" blue="0.20786692202091217" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            </state>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="2"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <action selector="resetButtonPressed:" destination="Zj7-wr-kwT" eventType="touchUpInside" id="gFg-8s-2i0"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                </stackView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AwC-a7-GXQ" customClass="CustomButton" customModule="Clock" customModuleProvider="target">
                                                     <rect key="frame" x="272" y="42" width="65" height="65"/>
                                                     <color key="backgroundColor" red="0.29803921568627451" green="0.68627450980392157" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -118,12 +151,12 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="bf9-i6-Bfp" firstAttribute="top" secondItem="3ak-Zh-ndA" secondAttribute="bottom" constant="8" id="6h0-E9-T5c"/>
+                                                <constraint firstItem="HIh-9j-w9f" firstAttribute="top" secondItem="k6z-c7-9yM" secondAttribute="topMargin" id="DR9-TO-VGC"/>
                                                 <constraint firstItem="3ak-Zh-ndA" firstAttribute="leading" secondItem="k6z-c7-9yM" secondAttribute="leadingMargin" constant="12" id="NAa-Rn-RlC"/>
-                                                <constraint firstItem="DDE-xS-r41" firstAttribute="top" secondItem="k6z-c7-9yM" secondAttribute="topMargin" id="Qds-Va-U2r"/>
+                                                <constraint firstItem="HIh-9j-w9f" firstAttribute="leading" secondItem="3ak-Zh-ndA" secondAttribute="trailing" constant="16" id="OMC-iz-Bht"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="AwC-a7-GXQ" secondAttribute="trailing" constant="30" id="R3V-AN-w4H"/>
                                                 <constraint firstItem="AwC-a7-GXQ" firstAttribute="centerY" secondItem="bf9-i6-Bfp" secondAttribute="centerY" id="UnV-Ch-1hW"/>
                                                 <constraint firstItem="bf9-i6-Bfp" firstAttribute="leading" secondItem="k6z-c7-9yM" secondAttribute="leadingMargin" constant="12" id="VEJ-He-JIE"/>
-                                                <constraint firstItem="DDE-xS-r41" firstAttribute="leading" secondItem="3ak-Zh-ndA" secondAttribute="trailing" constant="8" id="fCa-Xo-Oxd"/>
                                                 <constraint firstItem="3ak-Zh-ndA" firstAttribute="top" secondItem="k6z-c7-9yM" secondAttribute="topMargin" id="myJ-hb-Gz1"/>
                                             </constraints>
                                         </tableViewCellContentView>
