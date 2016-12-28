@@ -190,9 +190,7 @@ class TimerVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSF
             cell.changeButton(start: true)
         }
         
-        if let name = timer.name {
-            cell.nameLbl.text = "\(name)  - "
-        }
+        cell.nameLbl.text = timer.name
         
     }
     
