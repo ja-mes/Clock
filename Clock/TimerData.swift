@@ -13,7 +13,7 @@ class TimerData {
     
     private var name: String = ""
     
-    func saveAlert(timer: TimerEntity? = nil) -> UIAlertController {
+    func saveAlert(viewController: UIViewController, timer: TimerEntity? = nil) {
         var title = ""
         
         if timer != nil {
@@ -41,6 +41,8 @@ class TimerData {
             
         }
         
+        
+        
         alertController.addAction(cancelAction)
         alertController.addAction(saveAction)
         
@@ -52,7 +54,8 @@ class TimerData {
             }
         }
         
-        return alertController
+        
+        viewController.present(alertController, animated: true, completion: nil)
     }
     
     func save(timer: TimerEntity? = nil) {
