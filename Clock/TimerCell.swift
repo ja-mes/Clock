@@ -37,7 +37,7 @@ class TimerCell: UITableViewCell {
             
             timerEntity.pauseDate = NSDate()
             
-            toggleButton(start: true)
+            changeButton(start: true)
         } else {
             timerEntity.isRunning = true
             
@@ -52,14 +52,14 @@ class TimerCell: UITableViewCell {
             }
             
                         
-            toggleButton(start: false)
+            changeButton(start: false)
         }
         
         appDel.saveContext()
 
     }
     
-    func toggleButton(start: Bool) {
+    func changeButton(start: Bool) {
         if start {
             startButton.backgroundColor = #colorLiteral(red: 0, green: 0.6969566941, blue: 0.2550100088, alpha: 1)
             startButton.setTitle("Start", for: .normal)

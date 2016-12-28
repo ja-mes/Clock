@@ -160,11 +160,16 @@ class TimerVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSF
         if timer.isRunning, let startDate = timer.startDate {
             let secondsInt = Int(Date().timeIntervalSince(startDate as Date).rounded())
             cell.timeLbl.text = timerData.secondsToTimeString(seconds: secondsInt)
+            cell.changeButton(start: false)
             
         } else if let startDate = timer.startDate, let pauseDate = timer.pauseDate {
             let timeOnTimer = Int(timerData.calculateTimeWhenPaused(startDate: startDate, pauseDate: pauseDate))
             
             cell.timeLbl.text = timerData.secondsToTimeString(seconds: Int(timeOnTimer))
+            cell.changeButton(start: true)
+        } else {
+            cell.timeLbl.text = "00:00"
+            cell.changeButton(start: true)
         }
         
         if let name = timer.name {
