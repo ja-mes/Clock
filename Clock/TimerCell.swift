@@ -31,6 +31,10 @@ class TimerCell: UITableViewCell {
     }
 
     @IBAction func resetButtonPressed(_ sender: UIButton) {
+        timerEntity.startDate = nil
+        timerEntity.pauseDate = nil
+        timerEntity.isRunning = false
+        appDel.saveContext()
     }
     
     @IBAction func startButtonPressed(_ sender: UIButton) {
