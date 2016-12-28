@@ -52,9 +52,7 @@ class TimerCell: UITableViewCell {
                 timerEntity.startDate = NSDate()
             }
             
-            
-            //timerEntity.startDate = NSDate()
-            
+                        
             sender.backgroundColor = #colorLiteral(red: 1, green: 0.1535346806, blue: 0.1441769302, alpha: 1)
             sender.setTitle("Stop", for: .normal)
         }

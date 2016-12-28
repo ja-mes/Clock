@@ -162,7 +162,7 @@ class TimerVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSF
             cell.timeLbl.text = timerData.secondsToTimeString(seconds: secondsInt)
             
         } else if let startDate = timer.startDate, let pauseDate = timer.pauseDate {
-            let timeOnTimer = Int(timerData.calculateTimeWhenPaused(startDate: startDate, pauseDate: pauseDate).rounded())
+            let timeOnTimer = Int(timerData.calculateTimeWhenPaused(startDate: startDate, pauseDate: pauseDate))
             
             cell.timeLbl.text = timerData.secondsToTimeString(seconds: Int(timeOnTimer))
         }
