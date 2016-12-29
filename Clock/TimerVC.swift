@@ -186,7 +186,7 @@ class TimerVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSF
             cell.timeLbl.text = timerData.secondsToTimeString(seconds: Int(timeOnTimer))
             cell.changeButton(start: true)
         } else {
-            cell.timeLbl.text = "00:00"
+            cell.timeLbl.text = "00:00:00"
             cell.changeButton(start: true)
         }
         
