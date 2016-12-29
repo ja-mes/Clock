@@ -111,7 +111,7 @@ class TimerData {
     }
     
     @objc private func textFieldChanged(textField: UITextField) {
-        if let text = textField.text, text.characters.count > 17 {
+        if let text = textField.text, text.characters.count > 20 {
             textField.text = text.substring(to: text.index(before: text.endIndex))
         }
     }
