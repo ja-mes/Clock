@@ -13,6 +13,7 @@ class TimerData {
     
     private var name: String = ""
     
+    
     func saveAlert(viewController: UIViewController, timer: TimerEntity? = nil) {
         var title = ""
         
@@ -48,6 +49,7 @@ class TimerData {
         
         alertController.addTextField { (textField) in
             textField.placeholder = "Title"
+            textField.addTarget(self, action: #selector(self.textFieldChanged(textField:)), for: .editingChanged)
             
             if let timer = timer {
                 textField.text = timer.name
@@ -107,6 +109,12 @@ class TimerData {
         
         return "\(hours):\(minutes):\(seconds)"
         
+    }
+    
+    @objc private func textFieldChanged(textField: UITextField) {
+        if let text = textField.text, text.characters.count > 17 {
+            textField.text = text.substring(to: text.index(before: text.endIndex))
+        }
     }
 
 }
