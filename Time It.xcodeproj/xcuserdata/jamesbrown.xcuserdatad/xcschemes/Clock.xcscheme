@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "9B670B4E1E0B03FC00A22453"
-               BuildableName = "Clock.app"
-               BlueprintName = "Clock"
-               ReferencedContainer = "container:Clock.xcodeproj">
+               BuildableName = "Time It.app"
+               BlueprintName = "Time It"
+               ReferencedContainer = "container:Time It.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9B670B4E1E0B03FC00A22453"
-            BuildableName = "Clock.app"
-            BlueprintName = "Clock"
-            ReferencedContainer = "container:Clock.xcodeproj">
+            BuildableName = "Time It.app"
+            BlueprintName = "Time It"
+            ReferencedContainer = "container:Time It.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -56,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9B670B4E1E0B03FC00A22453"
-            BuildableName = "Clock.app"
-            BlueprintName = "Clock"
-            ReferencedContainer = "container:Clock.xcodeproj">
+            BuildableName = "Time It.app"
+            BlueprintName = "Time It"
+            ReferencedContainer = "container:Time It.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -75,9 +75,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9B670B4E1E0B03FC00A22453"
-            BuildableName = "Clock.app"
-            BlueprintName = "Clock"
-            ReferencedContainer = "container:Clock.xcodeproj">
+            BuildableName = "Time It.app"
+            BlueprintName = "Time It"
+            ReferencedContainer = "container:Time It.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

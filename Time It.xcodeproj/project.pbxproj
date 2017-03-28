@@ -21,7 +21,7 @@
 /* Begin PBXFileReference section */
 		9B66D9F21E0B74C2000DA379 /* TimerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerCell.swift; sourceTree = "<group>"; };
 		9B66D9F41E0B7580000DA379 /* TimerData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerData.swift; sourceTree = "<group>"; };
-		9B670B4F1E0B03FC00A22453 /* Clock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Clock.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B670B4F1E0B03FC00A22453 /* Time It.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Time It.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B670B521E0B03FC00A22453 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B670B571E0B03FC00A22453 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9B670B5A1E0B03FC00A22453 /* Clock.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Clock.xcdatamodel; sourceTree = "<group>"; };
@@ -54,7 +54,7 @@
 		9B670B501E0B03FC00A22453 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9B670B4F1E0B03FC00A22453 /* Clock.app */,
+				9B670B4F1E0B03FC00A22453 /* Time It.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -103,9 +103,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9B670B4E1E0B03FC00A22453 /* Clock */ = {
+		9B670B4E1E0B03FC00A22453 /* Time It */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9B670B641E0B03FC00A22453 /* Build configuration list for PBXNativeTarget "Clock" */;
+			buildConfigurationList = 9B670B641E0B03FC00A22453 /* Build configuration list for PBXNativeTarget "Time It" */;
 			buildPhases = (
 				9B670B4B1E0B03FC00A22453 /* Sources */,
 				9B670B4C1E0B03FC00A22453 /* Frameworks */,
@@ -115,9 +115,9 @@
 			);
 			dependencies = (
 			);
-			name = Clock;
+			name = "Time It";
 			productName = Clock;
-			productReference = 9B670B4F1E0B03FC00A22453 /* Clock.app */;
+			productReference = 9B670B4F1E0B03FC00A22453 /* Time It.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -137,7 +137,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 9B670B4A1E0B03FC00A22453 /* Build configuration list for PBXProject "Clock" */;
+			buildConfigurationList = 9B670B4A1E0B03FC00A22453 /* Build configuration list for PBXProject "Time It" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -150,7 +150,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9B670B4E1E0B03FC00A22453 /* Clock */,
+				9B670B4E1E0B03FC00A22453 /* Time It */,
 			);
 		};
 /* End PBXProject section */
@@ -304,7 +304,7 @@
 				DEVELOPMENT_TEAM = 5ZLSFF34EF;
 				INFOPLIST_FILE = Clock/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jamez-brown.time-it-stopwatch";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jamez-brown.time-it";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -317,7 +317,7 @@
 				DEVELOPMENT_TEAM = 5ZLSFF34EF;
 				INFOPLIST_FILE = Clock/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jamez-brown.time-it-stopwatch";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jamez-brown.time-it";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -326,7 +326,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9B670B4A1E0B03FC00A22453 /* Build configuration list for PBXProject "Clock" */ = {
+		9B670B4A1E0B03FC00A22453 /* Build configuration list for PBXProject "Time It" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9B670B621E0B03FC00A22453 /* Debug */,
@@ -335,7 +335,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9B670B641E0B03FC00A22453 /* Build configuration list for PBXNativeTarget "Clock" */ = {
+		9B670B641E0B03FC00A22453 /* Build configuration list for PBXNativeTarget "Time It" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9B670B651E0B03FC00A22453 /* Debug */,
